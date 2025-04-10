@@ -1,0 +1,237 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 4em 2em;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-text {
+    max-width: 50%;
+}
+
+.header-text h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Adds a subtle text shadow */
+}
+
+.header-text p {
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+.header-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Styling */
+section {
+    margin: 3em auto;
+    padding: 2em;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Increased to allow side-by-side content */
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px); /* Subtle hover effect */
+}
+
+section h2 {
+    font-size: 2.4em;
+    margin-bottom: 1em;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 0.5em;
+}
+
+section p {
+    font-size: 1.2em;
+    text-align: justify;
+    margin-bottom: 1.5em;
+}
+
+/* About Me and Projects Section */
+.about-projects {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.about-me, .projects {
+    flex: 1;
+    min-width: 280px; /* Ensure sections don't get too narrow on small screens */
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional: to give some border to the sections */
+    border-radius: 8px;
+}
+
+/* Projects Section */
+#projects {
+    margin-top: 2em;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center; /* Center the cards */
+}
+
+.project-card {
+    background-color: #fafafa;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%; /* Default to full width */
+    max-width: 300px; /* Limit the width */
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-8px); /* Subtle hover effect */
+}
+
+.project-card h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.project-card p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Skills & Reach Out Sections */
+#skills-reachout {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    flex-wrap: wrap; /* Allow these sections to wrap on smaller screens */
+    margin-top: 3em;
+}
+
+#skills, #contact {
+    width: 48%;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    font-size: 1.2em;
+    color: #666;
+}
+
+#skills ul li::before {
+    content: '\2022'; /* Bullet icon */
+    color: #0077cc;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+#contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+#contact ul li a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#contact ul li a:hover {
+    text-decoration: underline;
+    color: #004a8d;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+    margin-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    section {
+        margin: 2em 1em;
+        padding: 1.5em;
+    }
+
+    .about-projects {
+        flex-direction: column; /* Stack About Me and Projects vertically on smaller screens */
+        gap: 10px;
+    }
+
+    .about-me, .projects {
+        width: 100%; /* Ensure both sections take full width on small screens */
+    }
+
+    #skills-reachout {
+        flex-direction: column; /* Stack skills and contact on smaller screens */
+        align-items: center;
+    }
+
+    #skills, #contact {
+        width: 100%;
+    }
+}
